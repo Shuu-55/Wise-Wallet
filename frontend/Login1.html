@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #001f3e, #014a47);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .top-bar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .top-bar a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 10px;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.3);
+            /* Transparent background */
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            /* Portrait shape */
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #fff;
+            /* White text */
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: block;
+        }
+
+        .login-container input[type="submit"] {
+            background: #2abcc6;
+            /* Attractive button color */
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            padding: 12px 40px;
+            /* Increased padding for the button */
+            cursor: pointer;
+            font-weight: bold;
+            /* Make text bold */
+        }
+
+        .login-container input[type="submit"]:hover {
+            background: #d9534f;
+            /* Darker color on hover */
+        }
+
+        .forgot-password {
+            text-align: right;
+            /* Align "Forgot Password?" to the right */
+            margin-top: 50px;
+            /* Increased margin for better visibility */
+        }
+
+        .forgot-password a {
+            color: #2abcc6;
+            /* Highlighted link color */
+            text-decoration: underline;
+        }
+
+        .remember-me {
+            text-align: left;
+            /* Align "Remember Me" to the left */
+            color: #2abcc6;
+            /* Highlighted link color */
+            margin-top: -19px;
+            /* Move "Remember Me" up by changing the margin */
+        }
+
+        .wisewallet {
+            position: absolute;
+            top: 15px;
+            left: 13px;
+            color: #fff;
+            font-size: 29px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wisewallet">WISE WALLET</div>
+    <div class="top-bar">
+        <a href="#">Sign In</a> / <a href="#">Sign Up</a>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+        <div class="remember-me">
+            <input type="checkbox" id="rememberMe"> <label for="rememberMe">Remember Me</label>
+        </div>
+    </div>
+</body>
+
+</html>

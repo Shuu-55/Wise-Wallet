@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Wallet Create Budget module</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #90dbd7, #e3e9e8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background: #92c5cf;
+            /* White background */
+            border-radius: 15px;
+            padding: 36px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(113, 208, 210, 0.3);
+            width: 320px;
+            /* Portrait shape */
+            margin-bottom: 20px;
+        }
+
+        .small-box {
+            margin-bottom: 29px;
+            text-align: left;
+        }
+
+        .small-box label {
+            color: #041a20;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .create-button,
+        .recreate-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .create-button:hover,
+        .recreate-button:hover {
+            background: #de811e;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="small-box">
+            <label for="income">Income</label>
+            <input type="number" id="income" class="input-box" placeholder="Enter income">
+        </div>
+        <div class="small-box">
+            <label for="savingPercentage">Saving Percentage (Percentage of income you want to save)</label>
+            <input type="number" id="savingPercentage" class="input-box" placeholder="Enter saving percentage">
+        </div>
+        <div class="small-box">
+            <label for="remainingAmount">Remaining Amount</label>
+            <input type="number" id="remainingAmount" class="input-box" placeholder="Enter remaining amount">
+        </div>
+        <div class="button-container">
+            <button class="create-button">Create</button>
+            <button class="recreate-button">Recreate</button>
+        </div>
+    </div>
+
+    <div class="login-container hidden">
+        <div class="small-box">
+            <label for="income">Income</label>
+            <input type="number" id="income" class="input-box" placeholder="Enter income">
+        </div>
+        <div class="small-box">
+            <label for="savingPercentage">Saving Percentage (Percentage of income you want to save)</label>
+            <input type="number" id="savingPercentage" class="input-box" placeholder="Enter saving percentage">
+        </div>
+        <div class="small-box">
+            <label for="remainingAmount">Money Left (Expenses)</label>
+            <input type="number" id="remainingAmount" class="input-box" placeholder="Enter expenses">
+        </div>
+        <div class="button-container">
+            <button class="create-button">Create</button>
+            <button class="recreate-button">Recreate</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.recreate-button').addEventListener('click', function() {
+            document.querySelectorAll('.login-container.hidden').forEach(function(loginContainer) {
+                loginContainer.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
